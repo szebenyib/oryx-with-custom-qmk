@@ -1265,7 +1265,7 @@ bool caps_word_press_user(uint16_t keycode) {
             return true;
 
         // Keycodes that continue Caps Word, without shifting.
-        case KC_1 ... KC_0:
+        case KC_1 ... KC_9:
         case KC_BSPC:
         case KC_DEL:
         case KC_UNDS:
