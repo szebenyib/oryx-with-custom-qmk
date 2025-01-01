@@ -1245,73 +1245,73 @@ tap_dance_action_t tap_dance_actions[] = {
 // Custom QMK
 
 // Adding hungarian characters to continue caps word
-bool caps_word_press_user(uint16_t keycode) {
-    switch (keycode) {
-        // Keycodes that continue Caps Word, with shift applied.
-        case KC_A ... KC_Z:
-        case KC_MINS:
-        case HU_OO:
-        case HU_OEE:
-        case HU_EE:
-        case HU_AA:
-        case HU_II:
-        case HU_OE:
-        case HU_UE:
-        case HU_Z:
-        case HU_Y:
-        case HU_UU:
-        case HU_UEE:
-            add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
-            return true;
+/* bool caps_word_press_user(uint16_t keycode) { */
+/*     switch (keycode) { */
+/*         // Keycodes that continue Caps Word, with shift applied. */
+/*         case KC_A ... KC_Z: */
+/*         case KC_MINS: */
+/*         case HU_OO: */
+/*         case HU_OEE: */
+/*         case HU_EE: */
+/*         case HU_AA: */
+/*         case HU_II: */
+/*         case HU_OE: */
+/*         case HU_UE: */
+/*         case HU_Z: */
+/*         case HU_Y: */
+/*         case HU_UU: */
+/*         case HU_UEE: */
+/*             add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key. */
+/*             return true; */
 
-        // Keycodes that continue Caps Word, without shifting.
-        case KC_1 ... KC_0:
-        case KC_BSPC:
-        case KC_DEL:
-        case KC_UNDS:
-        case HU_0:
-        case HU_1:
-        case HU_2:
-        case HU_3:
-        case HU_4:
-        case HU_5:
-        case HU_X:
-        case HU_6:
-        case HU_7:
-        case HU_8:
-        case HU_9:
-        case HU_UNDS:
-        case HU_BSLS:
-        /* case HU_COMM: */
-        /* case HU_DOT: */
-        /* case HU_COLN: */
-        /* case HU_PIPE: */
-        /* case HU_PLUS: */
-        /* case HU_MINS: */
-        /* case HU_ASTR: */
-        /* case HU_SLSH: */
-        /* case HU_AMPR: */
-        /* case HU_SCLN: */
-        /* case HU_LBRC: */
-        /* case HU_RBRC: */
-        /* case HU_AT: */
-        /* case HU_TILD: */
-        /* case HU_CIRC: */
-        /* case HU_EXLM: */
-        /* case HU_QUOT: */
-        /* case HU_DLR: */
-        /* case HU_HASH: */
-        /* case HU_LPRN: */
-        /* case HU_RPRN: */
-        /* case HU_EQL: */
-        /* case HU_LESS: */
-        /* case HU_MORE: */
-        /* case HU_LCBR: */
-        /* case HU_RCBR: */
-        /* case HU_DQOT: */
-            return true;
+/*         // Keycodes that continue Caps Word, without shifting. */
+/*         case KC_1 ... KC_0: */
+/*         case KC_BSPC: */
+/*         case KC_DEL: */
+/*         case KC_UNDS: */
+/*         case HU_0: */
+/*         case HU_1: */
+/*         case HU_2: */
+/*         case HU_3: */
+/*         case HU_4: */
+/*         case HU_5: */
+/*         case HU_X: */
+/*         case HU_6: */
+/*         case HU_7: */
+/*         case HU_8: */
+/*         case HU_9: */
+/*         case HU_UNDS: */
+/*         case HU_BSLS: */
+/*         /1* case HU_COMM: *1/ */
+/*         /1* case HU_DOT: *1/ */
+/*         /1* case HU_COLN: *1/ */
+/*         /1* case HU_PIPE: *1/ */
+/*         /1* case HU_PLUS: *1/ */
+/*         /1* case HU_MINS: *1/ */
+/*         /1* case HU_ASTR: *1/ */
+/*         /1* case HU_SLSH: *1/ */
+/*         /1* case HU_AMPR: *1/ */
+/*         /1* case HU_SCLN: *1/ */
+/*         /1* case HU_LBRC: *1/ */
+/*         /1* case HU_RBRC: *1/ */
+/*         /1* case HU_AT: *1/ */
+/*         /1* case HU_TILD: *1/ */
+/*         /1* case HU_CIRC: *1/ */
+/*         /1* case HU_EXLM: *1/ */
+/*         /1* case HU_QUOT: *1/ */
+/*         /1* case HU_DLR: *1/ */
+/*         /1* case HU_HASH: *1/ */
+/*         /1* case HU_LPRN: *1/ */
+/*         /1* case HU_RPRN: *1/ */
+/*         /1* case HU_EQL: *1/ */
+/*         /1* case HU_LESS: *1/ */
+/*         /1* case HU_MORE: *1/ */
+/*         /1* case HU_LCBR: *1/ */
+/*         /1* case HU_RCBR: *1/ */
+/*         /1* case HU_DQOT: *1/ */
+/*             return true; */
 
-        default:
-            return false;  // Deactivate Caps Word.
-    }
-};
+/*         default: */
+/*             return false;  // Deactivate Caps Word. */
+/*     } */
+/* }; */
