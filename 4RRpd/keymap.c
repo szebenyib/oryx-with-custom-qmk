@@ -1251,16 +1251,16 @@ bool caps_word_press_user(uint16_t keycode) {
         case KC_A ... KC_Z:
         case KC_MINS:
         case HU_OO:
-        /* case HU_OEE: */
-        /* case HU_EE: */
-        /* case HU_AA: */
-        /* case HU_II: */
-        /* case HU_OE: */
-        /* case HU_UE: */
-        /* case HU_Z: */
-        /* case HU_Y: */
-        /* case HU_UU: */
-        /* case HU_UEE: */
+        case HU_OEE:
+        case HU_EE:
+        case HU_AA:
+        case HU_II:
+        case HU_OE:
+        case HU_UE:
+        case HU_Z:
+        case HU_Y:
+        case HU_UU:
+        case HU_UEE:
             add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
             return true;
 
