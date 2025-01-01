@@ -1280,8 +1280,9 @@ bool caps_word_press_user(uint16_t keycode) {
         /* case HU_7: */
         /* case HU_8: */
         /* case HU_9: */
+        case KC_LSFT: /* Since HU_UNDS sends S that would break capturing */
+        case KC_RSFT:
         case HU_UNDS: /* S(KC_SLSH) */
-        case KC_SLSH: /* as the above does not work */
         /* case HU_BSLS: */
         /* case HU_COMM: */
         /* case HU_DOT: */
