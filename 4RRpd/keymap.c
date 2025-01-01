@@ -1280,7 +1280,7 @@ bool caps_word_press_user(uint16_t keycode) {
         /* case HU_7: */
         /* case HU_8: */
         /* case HU_9: */
-        /* case HU_UNDS: */
+        case HU_UNDS:
         /* case HU_BSLS: */
         /* case HU_COMM: */
         /* case HU_DOT: */
