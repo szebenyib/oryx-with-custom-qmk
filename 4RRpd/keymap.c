@@ -1256,16 +1256,16 @@ bool caps_word_press_user(uint16_t keycode) {
         case HU_AA:
         case HU_II:
         case HU_OE:
-        /* case HU_UE: */
-        /* case HU_Z: */
-        /* case HU_Y: */
+        /* case HU_UE: same as KC_MINS */
+        /* case HU_Z: same as KC_Y */
+        /* case HU_Y: same as KC_Z */
         case HU_UU:
         case HU_UEE:
             add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
             return true;
 
         // Keycodes that continue Caps Word, without shifting.
-        case KC_1 ... KC_9:
+        case KC_1 ... KC_9: /* Had to remove KC_0 as it is HU_OE and it needs shifting */
         case KC_BSPC:
         case KC_DEL:
         case KC_UNDS:
