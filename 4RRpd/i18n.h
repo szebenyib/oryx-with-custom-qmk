@@ -17,7 +17,6 @@
 #define HU_OE KC_0
 #define HU_UE KC_MINS
 #define HU_Z KC_Y
-#define HU_UNDS S(KC_SLSH)
 #define HU_BSLS ALGR(KC_Q)
 #define HU_COMM KC_COMM
 #define HU_DOT KC_DOT

@@ -157,6 +157,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM -50;
         case MT(MOD_RSFT, KC_N):
             return TAPPING_TERM -40;
+        case LT(2,KC_ENTER):
+            return TAPPING_TERM -40;
         default:
             return TAPPING_TERM;
     }
@@ -723,30 +725,30 @@ void dance_12_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_12(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(HU_UNDS);
-        tap_code16(HU_UNDS);
-        tap_code16(HU_UNDS);
+        tap_code16(KC_LEFT_GUI);
+        tap_code16(KC_LEFT_GUI);
+        tap_code16(KC_LEFT_GUI);
     }
     if(state->count > 3) {
-        tap_code16(HU_UNDS);
+        tap_code16(KC_LEFT_GUI);
     }
 }
 
 void dance_12_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[10].step = dance_step(state);
     switch (dance_state[10].step) {
-        case SINGLE_TAP: register_code16(HU_UNDS); break;
+        case SINGLE_TAP: register_code16(KC_LEFT_GUI); break;
         case DOUBLE_TAP: register_code16(HU_BSLS); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(HU_UNDS); register_code16(HU_UNDS);
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_LEFT_GUI); register_code16(KC_LEFT_GUI);
     }
 }
 
 void dance_12_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[10].step) {
-        case SINGLE_TAP: unregister_code16(HU_UNDS); break;
+        case SINGLE_TAP: unregister_code16(KC_LEFT_GUI); break;
         case DOUBLE_TAP: unregister_code16(HU_BSLS); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(HU_UNDS); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_LEFT_GUI); break;
     }
     dance_state[10].step = 0;
 }
